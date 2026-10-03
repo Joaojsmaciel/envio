@@ -1,0 +1,29 @@
+TELEGRAM FOTOS — WINDOWS
+
+1. Extraia todo o ZIP para uma pasta.
+2. Execute instalar.bat uma vez.
+3. Execute iniciar.bat.
+4. Informe:
+   - seu telefone do Telegram
+   - a planilha CSV
+   - a foto
+5. Na primeira execução, será pedido o código enviado pelo Telegram.
+6. Se houver verificação em duas etapas, será pedida sua senha.
+
+As credenciais da aplicação Telegram já estão no arquivo config.json.
+
+CSV:
+Telefone,Status
+5592984147470,PENDENTE
+
+STATUS:
+PENDENTE       = será processado
+ENVIADO        = envio aceito pelo Telegram
+NAO_LOCALIZADO = o número não pôde ser resolvido
+ERRO           = outra falha
+
+IMPORTANTE:
+- telegram_session.session guarda sua sessão autenticada.
+- Não compartilhe telegram_session.session.
+- config.json contém as credenciais da aplicação e também não deve ser publicado.
+- Se o Telegram retornar FloodWait, o programa para e preserva os demais PENDENTES.
